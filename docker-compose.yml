@@ -1,0 +1,12 @@
+version: "3.0"
+
+services: 
+  web:
+    container_name: express
+    build: .
+    ports: 
+      - "8080:8080"
+    volumes: 
+      - ./resources:/usr/src/app/resources
+    environment: 
+      - TZ=Europe/Kiev
